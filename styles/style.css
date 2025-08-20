@@ -246,6 +246,14 @@ strong{
     padding: 8rem 10%;
 }
 
+.tercera_seccion p{
+    padding: 0 0 3rem 0;
+}
+
+.tercera_seccion h2{
+    font-size: xx-large;
+}
+
 .tercera_seccion_general{
     display: flex;
     justify-content: space-between;
