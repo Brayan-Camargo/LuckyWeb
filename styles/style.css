@@ -114,6 +114,19 @@ img {
   cursor: pointer;
 }
 
+/* ===== ESTILOS PARA MENÚ SÓLIDO EN PÁGINAS SECUNDARIAS ===== */
+
+.secondary-page .menu {
+    background: var(--degradado-melocoton);
+    box-shadow: none;
+}
+
+/* Evita que el contenido de la página se oculte detrás del menú fijo */
+.secondary-page .contenido,
+.secondary-page main {
+    padding-top: var(--menu-altura-aprox);
+}
+
 strong{
     background: var(--degradado-melocoton);
     -webkit-background-clip: text; /* Recorta el fondo al texto */
