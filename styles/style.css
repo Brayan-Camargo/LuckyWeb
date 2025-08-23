@@ -381,6 +381,116 @@ footer{
     transform: scale(1.10);
 }
 
+/* ===== FORMULARIO ===== */
+.contact-section {
+    display: flex; /* Habilita Flexbox */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    padding: 5rem 10%;
+    gap: 2rem;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+}
+
+.contact-image {
+    flex: 1;
+    min-width: 300px;
+    
+}
+
+.contact-image img {
+    width: 100%;
+    max-height: 700px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.form-container {
+    flex: 1;
+    min-width: 300px;
+    padding: 2rem;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: var(--color-negro);
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block; /* Ocupa todo el ancho */
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--color-lila);
+    box-shadow: 0 0 5px var(--color-lila);
+}
+
+.form-container button {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+    background: var(--degradado-melocoton);
+    color: var(--color-blanco);
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.form-container button:hover {
+    background: transparent;
+    border-color:#ff7e5f;
+    color: #ff7e5f;
+    transform: translateY(-2px);
+}
+
+/* ===== BOTÓN DE WHATSAPP FLOTANTE ===== */
+.whatsapp-button {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    transition: transform 0.3s ease-in-out;
+}
+
+.whatsapp-button img {
+    width: 100%;
+    height: auto;
+}
+
+.whatsapp-button:hover {
+    transform: scale(1.1);
+}
+
 /* ===== RESPONSIVE ===== */
 
 @media (max-width: 768px){
