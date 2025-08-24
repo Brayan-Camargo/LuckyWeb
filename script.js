@@ -1,38 +1,43 @@
-const words = ["Increíble", "Profesional", "Moderna", "Única"];
-let wordIndex = 0;
-let letterIndex = 0;
-let currentWord = "";
-let currentLetters = "";
+// Efecto de texto rotativo - SOLO se ejecuta en la página principal
+const rotatingTextElement = document.getElementById("rotating_text");
 
-function type() {
-  if (wordIndex === words.length) {
-    wordIndex = 0;
-  }
-  currentWord = words[wordIndex];
-  currentLetters = currentWord.slice(0, ++letterIndex);
+if (rotatingTextElement) {
+    const words = ["Increíble", "Profesional", "Moderna", "Única"];
+    let wordIndex = 0;
+    let letterIndex = 0;
+    let currentWord = "";
+    let currentLetters = "";
 
-  document.getElementById("rotating-text").textContent = currentLetters;
+    function type() {
+        if (wordIndex === words.length) {
+            wordIndex = 0;
+        }
+        currentWord = words[wordIndex];
+        currentLetters = currentWord.slice(0, ++letterIndex);
 
-  if (currentLetters.length === currentWord.length) {
-    setTimeout(erase, 1500);
-  } else {
-    setTimeout(type, 100);
-  }
+        rotatingTextElement.textContent = currentLetters;
+
+        if (currentLetters.length === currentWord.length) {
+            setTimeout(erase, 1500);
+        } else {
+            setTimeout(type, 100);
+        }
+    }
+
+    function erase() {
+        currentLetters = currentWord.slice(0, --letterIndex);
+        rotatingTextElement.textContent = currentLetters;
+
+        if (currentLetters.length === 0) {
+            wordIndex++;
+            setTimeout(type, 500);
+        } else {
+            setTimeout(erase, 50);
+        }
+    }
+
+  type();
 }
-
-function erase() {
-  currentLetters = currentWord.slice(0, --letterIndex);
-  document.getElementById("rotating-text").textContent = currentLetters;
-
-  if (currentLetters.length === 0) {
-    wordIndex++;
-    setTimeout(type, 500);
-  } else {
-    setTimeout(erase, 50);
-  }
-}
-
-type();
 
 //Efecto de menu scroll
 window.addEventListener("scroll", function() {

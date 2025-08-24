@@ -46,7 +46,7 @@ p{
     font-size: clamp(16px, 3vw, 20px);
 }
 
-img {
+img{
   max-width: 100%;
   height: auto;
   display: block;
@@ -99,7 +99,7 @@ img {
     transform: scale(1.15);
 }
 
-.btn-outline{
+.btn_outline{
     padding: 14px 24px;
     border: 2px solid var(--color-blanco);
     border-radius: 8px;
@@ -116,14 +116,14 @@ img {
 
 /* ===== ESTILOS PARA MENÚ SÓLIDO EN PÁGINAS SECUNDARIAS ===== */
 
-.secondary-page .menu {
+.secondary_page .menu {
     background: var(--degradado-melocoton);
     box-shadow: none;
 }
 
 /* Evita que el contenido de la página se oculte detrás del menú fijo */
-.secondary-page .contenido,
-.secondary-page main {
+.secondary_page .contenido,
+.secondary_page main {
     padding-top: var(--menu-altura-aprox);
 }
 
@@ -158,7 +158,7 @@ strong{
 }
 
 .hero_content h1{
-    font-size: clamp(28px, 6vw, 64px);
+    font-size: clamp(28px, 6vw, 60px);
     margin-bottom: 12px;
 }
 
@@ -180,7 +180,6 @@ strong{
 
 .btn:hover{
     transform: scale(1.10);
-    background: var(--degradado-inverso);
 }
 
 /* ===== EFECTO CAMBIO PALABRAS ===== */
@@ -235,7 +234,7 @@ strong{
     display: flex;
     background: var(--degradado-melocoton);
     color: var(--color-blanco);
-    padding: 1.2rem 3rem;
+    padding: 1.2rem 4rem;
     border-radius: 8px;
     text-decoration: none;
     font-weight: 600;
@@ -310,8 +309,8 @@ strong{
 }
 
 .imagenes_reseñas{
-    width: 5rem;
-    height: 6rem;
+    width: 4rem;
+    height: 5rem;
     border-radius: 100%;
     padding-right: 1rem;
     padding: 0.5rem 0;
@@ -319,13 +318,13 @@ strong{
 }
 
 .cuarta_seccion_reseña{
-    padding: 2rem 0;
+    display: flex;
+    padding: 2rem;
 }
 
-.cuarta_seccion_general p {
+.reseña_texto {
     text-align: justify;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
+    margin: 0.5rem 0.5rem 0.5rem 1rem;
     line-height: 1.5;
 }
 
@@ -353,6 +352,10 @@ strong{
     gap: 24px;
 }
 
+.quinta_seccion_distan_botones a:hover{
+    transform: scale(1.1);
+}
+
 footer{
     display: flex;
     justify-content: space-around;
@@ -372,11 +375,18 @@ footer{
 
 .imagenes_footer{
     display: flex;
-    width: 40px;
-    height: 40px;
+    align-content: center;
+}
+
+.imagenes_footer a{
+    display: flex;
+    justify-content: space-between;
+    width: 23px;
+    height: 23px;
     object-fit: cover;
     gap: 1rem;
-    padding-top: 1rem;
+    margin: 0.3rem;
+   
 }
 
 .imagenes_footer img:hover{
@@ -395,7 +405,7 @@ footer{
 }
 
 /* ===== FORMULARIO ===== */
-.contact-section {
+.contact_section {
     display: flex; /* Habilita Flexbox */
     justify-content: center; /* Centra horizontalmente */
     align-items: center; /* Centra verticalmente */
@@ -404,20 +414,20 @@ footer{
     flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
 }
 
-.contact-image {
+.contact_image {
     flex: 1;
     min-width: 300px;
     
 }
 
-.contact-image img {
+.contact_image img {
     width: 100%;
     max-height: 700px;
     border-radius: 8px;
     object-fit: cover;
 }
 
-.form-container {
+.form_container {
     flex: 1;
     min-width: 300px;
     padding: 2rem;
@@ -426,24 +436,24 @@ footer{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.form-container h2 {
+.form_container h2 {
     text-align: center;
     margin-bottom: 1.5rem;
     color: var(--color-negro);
 }
 
-.form-group {
+.form_group {
     margin-bottom: 1rem;
 }
 
-.form-group label {
+.form_group label {
     display: block; /* Ocupa todo el ancho */
     margin-bottom: 0.5rem;
     font-weight: 600;
 }
 
-.form-group input,
-.form-group textarea {
+.form_group input,
+.form_group textarea {
     width: 100%;
     padding: 0.75rem;
     border: 1px solid #ccc;
@@ -451,14 +461,14 @@ footer{
     font-size: 1rem;
 }
 
-.form-group input:focus,
-.form-group textarea:focus {
+.form_group input:focus,
+.form_group textarea:focus {
     outline: none;
     border-color: var(--color-lila);
     box-shadow: 0 0 5px var(--color-lila);
 }
 
-.form-container button {
+.form_container button {
     width: 100%;
     padding: 1rem;
     border: none;
@@ -471,7 +481,7 @@ footer{
     transition: background 0.3s ease, transform 0.3s ease;
 }
 
-.form-container button:hover {
+.form_container button:hover {
     background: transparent;
     border-color:#ff7e5f;
     color: #ff7e5f;
@@ -479,7 +489,7 @@ footer{
 }
 
 /* ===== BOTÓN DE WHATSAPP FLOTANTE ===== */
-.whatsapp-button {
+.whatsapp_button {
     position: fixed;
     right: 20px;
     bottom: 20px;
@@ -495,12 +505,12 @@ footer{
     transition: transform 0.3s ease-in-out;
 }
 
-.whatsapp-button img {
+.whatsapp_button img {
     width: 100%;
     height: auto;
 }
 
-.whatsapp-button:hover {
+.whatsapp_button:hover {
     transform: scale(1.1);
 }
 
@@ -512,10 +522,14 @@ footer{
         text-align: center;
     }
 
+    h2{
+        font-size: xx-large;
+    }
+
     /* Menú */
     .menu_div{
-        flex-direction: flex;
-        justify-content: space-around;
+        flex-direction: column;
+        justify-content: center;
         padding: 0;
     }
 
@@ -524,14 +538,12 @@ footer{
         gap: 1rem;
     }
 
-    .menu_toggle {
-        display: block;
-    }
-
+    /* Oculta los links por defecto */
     .menu_links {
         position: absolute;
-        top: 60px; /* debajo del header */
+        top: 100%; /* Deja que el contenedor del menú sea el que se posicione */
         flex-direction: column;
+        width: 100%;
         background: var(--degradado-melocoton);
         border-radius: 0 0 8px 8px;
         box-shadow: 0 4px 8px rgba(0,0,0,0.3);
@@ -539,7 +551,7 @@ footer{
         right: 0;
 
         /* animación */
-        max-height: auto;
+        max-height: 0;
         opacity: 0;
         transition: max-height 0.4s ease, opacity 0.4s ease;
     }
@@ -553,21 +565,37 @@ footer{
         padding: 0.5rem 1rem;
     }
 
-    .btn-outline{
-    padding: 14px 24px;
+    .menu_links a, .logo {
+        color: var(--color-blanco); 
+    }
+
+    .btn_outline{
     border: none;
     }
     
     .logo{
-        display: flex;
         padding: 0;
     }
 
-
+    /* Icono de hamburguesa */
+    .menu_toggle {
+      display: block;
+      font-size: 2rem;
+      background: none;
+      border: none;
+      color: var(--color-blanco);
+      cursor: pointer;
+    }
+    
     /* Hero */
     .hero_content{
         text-align: center;
         padding: 2rem 1rem;
+    }
+
+    .hero_content h1{
+        font-weight: 900;
+        font-size: xx-large;
     }
 
     /* Segunda sección */
@@ -601,12 +629,21 @@ footer{
         text-align: center;
     }
 
+    .tercera_seccion_imagenes{
+        height: auto;
+    }
+
     /* Cuarta sección */
     .cuarta_seccion_general{
         flex-direction: column;
         align-items: center;
         align-content: center;
         gap: 2rem;
+        padding: 1.5rem 0;
+    }
+
+    .cuarta_seccion_reseña{
+        padding: 0.5rem;    
     }
 
     /* Quinta sección */
@@ -619,6 +656,10 @@ footer{
     .quinta_seccion_distan_botones{
         flex-direction: column;
         gap: 1rem;
+    }
+
+    .contact_section{
+        flex-direction: column-reverse;
     }
 
     /* Footer */
